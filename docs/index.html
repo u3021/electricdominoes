@@ -1,5 +1,125 @@
+<!DOCTYPE html>
 <h1 id="a"></h1>
+<head>
+  <meta charset="UTF-8">
+  <title>panitpiantpaint</title>
+</head>
+<h1 id="a"></h1>
+<h1 id="b"></h1>
+<h1 id="c"></h1>
+<h1 id="d"></h1>
+<h1 id="e"></h1>
 <script>
   document.body.style.backgroundColor = "blue";
   document.querySelector("#a").innerHTML="egg"
+  var x = 3;
+  var y = 3;
+  document.querySelector("#c").innerHTML="⬜⬜🔲⬜⬜"
+    document.querySelector("#a").innerHTML="⬜⬜⬜⬜⬜"
+    document.querySelector("#b").innerHTML="⬜⬜⬜⬜⬜"
+   document.querySelector("#d").innerHTML="⬜⬜⬜⬜⬜"
+    document.querySelector("#e").innerHTML="⬜⬜⬜⬜⬜"
+  document.addEventListener('keydown', (event) => {
+    if (event.key === "ArrowUp"){
+      if (y != 1){
+--y;
+      }
+  }
+    if (event.key === "ArrowDown"){
+  if (y != 5){
+++y;
+      }
+  }
+    if (event.key === "ArrowLeft"){
+  if (x != 1){
+        --x;
+      }
+    }
+    if (event.key === "ArrowRight"){
+  if (x != 5){
+        ++x;
+      }
+    }
+if (y === 3){
+    document.querySelector("#a").innerHTML="⬜⬜⬜⬜⬜"
+    document.querySelector("#b").innerHTML="⬜⬜⬜⬜⬜"
+   document.querySelector("#d").innerHTML="⬜⬜⬜⬜⬜"
+    document.querySelector("#e").innerHTML="⬜⬜⬜⬜⬜"
+}
+else if (y === 1){
+    document.querySelector("#c").innerHTML="⬜⬜⬜⬜⬜"
+    document.querySelector("#b").innerHTML="⬜⬜⬜⬜⬜"
+   document.querySelector("#d").innerHTML="⬜⬜⬜⬜⬜"
+    document.querySelector("#e").innerHTML="⬜⬜⬜⬜⬜"
+}
+else if (y === 2){
+    document.querySelector("#a").innerHTML="⬜⬜⬜⬜⬜"
+    document.querySelector("#c").innerHTML="⬜⬜⬜⬜⬜"
+   document.querySelector("#d").innerHTML="⬜⬜⬜⬜⬜"
+    document.querySelector("#e").innerHTML="⬜⬜⬜⬜⬜"
+}
+else if (y === 4){
+    document.querySelector("#a").innerHTML="⬜⬜⬜⬜⬜"
+    document.querySelector("#b").innerHTML="⬜⬜⬜⬜⬜"
+   document.querySelector("#c").innerHTML="⬜⬜⬜⬜⬜"
+    document.querySelector("#e").innerHTML="⬜⬜⬜⬜⬜"
+}
+else if (y === 5){
+    document.querySelector("#a").innerHTML="⬜⬜⬜⬜⬜"
+    document.querySelector("#b").innerHTML="⬜⬜⬜⬜⬜"
+   document.querySelector("#d").innerHTML="⬜⬜⬜⬜⬜"
+    document.querySelector("#c").innerHTML="⬜⬜⬜⬜⬜"
+}
+if (x === 1 && y === 5){
+    document.querySelector("#e").innerHTML="🦆⬜⬜⬜⬜"
+}else if (x === 1 && y === 4){
+    document.querySelector("#d").innerHTML="🦆⬜⬜⬜⬜"
+}else if (x === 1 && y === 3){
+    document.querySelector("#c").innerHTML="🦆⬜⬜⬜⬜"
+}else if (x === 1 && y === 2){
+    document.querySelector("#b").innerHTML="🦆⬜⬜⬜⬜"
+}else if (x === 1 && y === 1){
+    document.querySelector("#a").innerHTML="🦆⬜⬜⬜⬜"
+}else if (duckplacex === 2 && duckplacey === 5){
+    document.querySelector("#duck5").innerHTML="⬜🦆⬜⬜⬜"
+}else if (duckplacex === 2 && duckplacey === 4){
+    document.querySelector("#duck4").innerHTML="⬜🦆⬜⬜⬜"
+}else if (duckplacex === 2 && duckplacey === 3){
+    document.querySelector("#duck3").innerHTML="⬜🦆⬜⬜⬜"
+}else if (duckplacex === 2 && duckplacey === 2){
+    document.querySelector("#duck2").innerHTML="⬜🦆⬜⬜⬜"
+}else if (duckplacex === 2 && duckplacey === 1){
+    document.querySelector("#duck1").innerHTML="⬜🦆⬜⬜⬜"
+}else if (duckplacex === 3 && duckplacey === 5){
+    document.querySelector("#duck5").innerHTML="⬜⬜🦆⬜⬜"
+}else if (duckplacex === 3 && duckplacey === 4){
+    document.querySelector("#duck4").innerHTML="⬜⬜🦆⬜⬜"
+}else if (duckplacex === 3 && duckplacey === 3){
+    document.querySelector("#duck3").innerHTML="⬜⬜🦆⬜⬜"
+}else if (duckplacex === 3 && duckplacey === 2){
+    document.querySelector("#duck2").innerHTML="⬜⬜🦆⬜⬜"
+}else if (duckplacex === 3 && duckplacey === 1){
+    document.querySelector("#duck1").innerHTML="⬜⬜🦆⬜⬜"
+}else if (duckplacex === 4 && duckplacey === 5){
+    document.querySelector("#duck5").innerHTML="⬜⬜⬜🦆⬜"
+}else if (duckplacex === 4 && duckplacey === 4){
+    document.querySelector("#duck4").innerHTML="⬜⬜⬜🦆⬜"
+}else if (duckplacex === 4 && duckplacey === 3){
+    document.querySelector("#duck3").innerHTML="⬜⬜⬜🦆⬜"
+}else if (duckplacex === 4 && duckplacey === 2){
+    document.querySelector("#duck2").innerHTML="⬜⬜⬜🦆⬜"
+}else if (duckplacex === 4 && duckplacey === 1){
+    document.querySelector("#duck1").innerHTML="⬜⬜⬜🦆⬜"
+}else if (duckplacex === 5 && duckplacey === 5){
+    document.querySelector("#duck5").innerHTML="⬜⬜⬜⬜🦆"
+}else if (duckplacex === 5 && duckplacey === 4){
+    document.querySelector("#duck4").innerHTML="⬜⬜⬜⬜🦆"
+}else if (duckplacex === 5 && duckplacey === 3){
+    document.querySelector("#duck3").innerHTML="⬜⬜⬜⬜🦆"
+}else if (duckplacex === 5 && duckplacey === 2){
+    document.querySelector("#duck2").innerHTML="⬜⬜⬜⬜🦆"
+}else if (duckplacex === 5 && duckplacey === 1){
+    document.querySelector("#duck1").innerHTML="⬜⬜⬜⬜🦆"
+}   
+});
 </script>
