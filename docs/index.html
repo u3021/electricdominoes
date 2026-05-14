@@ -17,13 +17,14 @@
   var duckplacex = 3;
   var duckplacey = 3;
   var hp = 3;
+  var timer = 5000;
    document.querySelector("#hpplayer").innerHTML="❤❤❤"
   document.querySelector("#duck3").innerHTML="⬜⬜🦆⬜⬜"
     document.querySelector("#duck1").innerHTML="⬜⬜⬜⬜⬜"
     document.querySelector("#duck2").innerHTML="⬜⬜⬜⬜⬜"
    document.querySelector("#duck4").innerHTML="⬜⬜⬜⬜⬜"
     document.querySelector("#duck5").innerHTML="⬜⬜⬜⬜⬜"
-   document.querySelector("#boss").innerHTML="⬜⬜?⬜⬜"
+   document.querySelector("#boss").innerHTML="⬜⬜🟦⬜⬜"
    document.querySelector("#hpboss").innerHTML="❤❤❤❤❤"
   document.addEventListener('keydown', (event) => {
     if (event.key === "ArrowUp"){
@@ -128,6 +129,7 @@ if (duckplacex === 1 && duckplacey === 5){
     document.querySelector("#duck1").innerHTML="⬜⬜⬜⬜🦆"
 }   
 });
+await sleep(timer);
 </script>
 </body>
 </html>
