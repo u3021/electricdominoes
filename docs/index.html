@@ -129,7 +129,9 @@ if (duckplacex === 1 && duckplacey === 5){
     document.querySelector("#duck1").innerHTML="⬜⬜⬜⬜🦆"
 }   
 });
-await sleep(timer);
+if (timer === 5000){
+  await sleep(timer);
+}
 </script>
 </body>
 </html>
