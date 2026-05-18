@@ -135,8 +135,6 @@ if (duckplacex === 1 && duckplacey === 5){
 });
 setTimeout(() => {
    randrow = getRandomInt(0, 5);
-  }, 4999);
-setTimeout(() => {
 if (randrow === 1){
      document.querySelector("#boss").innerHTML="🟦⬛⬛⬛⬛"
 }else if (randrow === 2){
@@ -148,7 +146,8 @@ if (randrow === 1){
 }else if (randrow === 5){
      document.querySelector("#boss").innerHTML="⬛⬛⬛⬛🟦"
 }
-}, 1);
+  }, 5000);
+
 </script>
 </body>
 </html>
