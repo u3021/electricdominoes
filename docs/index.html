@@ -25,7 +25,7 @@
     document.querySelector("#duck2").innerHTML="⬜⬜⬜⬜⬜"
    document.querySelector("#duck4").innerHTML="⬜⬜⬜⬜⬜"
     document.querySelector("#duck5").innerHTML="⬜⬜⬜⬜⬜"
-   document.querySelector("#boss").innerHTML="⬜⬜🟦⬜⬜"
+   document.querySelector("#boss").innerHTML="⬛⬛🟦⬛⬛"
    document.querySelector("#hpboss").innerHTML="❤❤❤❤❤"
     function rand(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -134,8 +134,19 @@ if (duckplacex === 1 && duckplacey === 5){
 }   
 });
 setTimeout(() => {
-   getRandomInt(0, 10)
+   randrow = getRandomInt(0, 5);
   }, 5000);
+if (randrow === 1){
+     document.querySelector("#boss").innerHTML="🟦⬛⬛⬛⬛"
+}else if (randrow === 2){
+     document.querySelector("#boss").innerHTML="⬛🟦⬛⬛⬛"
+}else if (randrow === 3){
+     document.querySelector("#boss").innerHTML="⬛⬛🟦⬛⬛"
+}else if (randrow === 4){
+     document.querySelector("#boss").innerHTML="⬛⬛⬛🟦⬛"
+}else if (randrow === 5){
+     document.querySelector("#boss").innerHTML="⬛⬛⬛⬛🟦"
+}
 </script>
 </body>
 </html>
