@@ -133,6 +133,7 @@ if (duckplacex === 1 && duckplacey === 5){
     document.querySelector("#duck1").innerHTML="⬜⬜⬜⬜🦆"
 }   
 });
+function bossmove(){
 setTimeout(() => {
    randrow = rand(1, 5);
 if (randrow === 1){
@@ -146,7 +147,9 @@ if (randrow === 1){
 }else if (randrow === 5){
      document.querySelector("#boss").innerHTML="⬛⬛⬛⬛🟦"
 }
+bossmove()
 }, 2000);
+}
 </script>
 </body>
 </html>
