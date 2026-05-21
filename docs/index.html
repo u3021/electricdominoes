@@ -5,6 +5,7 @@
   <title>duck :O</title>
 </head>
 <body>
+<h1 id="starttext"></h1>
 <h1 id="hpplayer"></h1>
 <h1 id="duck1"></h1>
 <h1 id="duck2"></h1>
@@ -19,7 +20,9 @@
   var hp = 3;
   var timer = 5000;
   var randrow = 0;
+  var attackrow = 0;
    document.querySelector("#hpplayer").innerHTML="❤❤❤"
+   document.querySelector("#starttext").innerHTML="press any key to start"
   document.querySelector("#duck3").innerHTML="⬜⬜🦆⬜⬜"
     document.querySelector("#duck1").innerHTML="⬜⬜⬜⬜⬜"
     document.querySelector("#duck2").innerHTML="⬜⬜⬜⬜⬜"
@@ -31,7 +34,8 @@
   return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 document.addEventListener('keydown', (event) => {
-    if (event.key === "ArrowUp"){
+document.querySelector("#starttext").innerHTML=""  
+  if (event.key === "ArrowUp"){
       if (duckplacey != 1){
 --duckplacey;
       }
@@ -138,14 +142,19 @@ setTimeout(() => {
    randrow = rand(1, 5);
 if (randrow === 1){
      document.querySelector("#boss").innerHTML="🟦⬛⬛⬛⬛"
+  attackrow = 1;
 }else if (randrow === 2){
      document.querySelector("#boss").innerHTML="⬛🟦⬛⬛⬛"
+  attackrow = 2;
 }else if (randrow === 3){
      document.querySelector("#boss").innerHTML="⬛⬛🟦⬛⬛"
+  attackrow = 3;
 }else if (randrow === 4){
      document.querySelector("#boss").innerHTML="⬛⬛⬛🟦⬛"
+  attackrow = 4;
 }else if (randrow === 5){
      document.querySelector("#boss").innerHTML="⬛⬛⬛⬛🟦"
+  attackrow = 5;
 }
 bossmove()
 }, 2000);
@@ -153,4 +162,4 @@ bossmove()
 bossmove()
 </script>
 </body>
-</html>
+</html>  
