@@ -21,6 +21,7 @@
   var timer = 5000;
   var randrow = 0;
   var attackrow = 0;
+  var start = 0;
    document.querySelector("#hpplayer").innerHTML="❤❤❤"
    document.querySelector("#starttext").innerHTML="press any key to start"
   document.querySelector("#duck3").innerHTML="⬜⬜🦆⬜⬜"
@@ -35,6 +36,7 @@
   }
 document.addEventListener('keydown', (event) => {
 document.querySelector("#starttext").innerHTML=""  
+start = 1;
   if (event.key === "ArrowUp"){
       if (duckplacey != 1){
 --duckplacey;
@@ -138,7 +140,8 @@ if (duckplacex === 1 && duckplacey === 5){
 }   
 });
 function bossmove(){
-setTimeout(() => {
+if (start === 1){
+  setTimeout(() => {
    randrow = rand(1, 5);
 if (randrow === 1){
      document.querySelector("#boss").innerHTML="🟦⬛⬛⬛⬛"
@@ -158,6 +161,7 @@ if (randrow === 1){
 }
 bossmove()
 }, 2000);
+}
 }
 bossmove()
 </script>
