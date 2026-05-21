@@ -36,7 +36,10 @@
   }
 document.addEventListener('keydown', (event) => {
 document.querySelector("#starttext").innerHTML=""  
-start = 1;
+if (start === 0){
+  start = 1;
+  bossmove()
+}
   if (event.key === "ArrowUp"){
       if (duckplacey != 1){
 --duckplacey;
@@ -163,7 +166,6 @@ bossmove()
 }, 2000);
 }
 }
-bossmove()
 </script>
 </body>
 </html>  
