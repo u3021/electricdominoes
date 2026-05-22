@@ -39,7 +39,7 @@ document.addEventListener('keydown', (event) => {
 document.querySelector("#starttext").innerHTML=""  
 if (start === 0){
   start = 1;
-  bossmove()
+  bossmove().repeat(5);
 }
   if (event.key === "ArrowUp"){
       if (duckplacey != 1){
@@ -164,7 +164,7 @@ if (randrow === 1){
   attackrow = 5;
 }
 }, 2000);
-}.repeat(5);
+}
 }
 </script>
 </body>
