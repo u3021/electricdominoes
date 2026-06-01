@@ -44,8 +44,7 @@ document.addEventListener('keydown', (event) => {
 document.querySelector("#starttext").innerHTML=""
 document.querySelector("#instructions1").innerHTML=""
 document.querySelector("#instructions2").innerHTML=""
-if (start === 0){
-  start = 1;
+start = 1;
   function round(){ 
   bossmove();
    setTimeout(() => {bossmove()}, 2000);
@@ -55,6 +54,8 @@ if (start === 0){
    setTimeout(() => {tired = 1; bossmove()}, 10000);
    setTimeout(() => {tired = 0; round()}, 12000);
   }
+if (start === 0){
+ round() 
 }
   if (event.key === "ArrowUp"){
       if (duckplacey != 1){
