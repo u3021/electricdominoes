@@ -40,10 +40,10 @@ document.querySelector("#starttext").innerHTML=""
 if (start === 0){
   start = 1;
   bossmove();
-  bossmove(), 2000);
-  bossmove(), 4000);
-  bossmove(), 6000);
-  bossmove(), 8000);
+   setTimeout(() => {bossmove()}, 2000);
+   setTimeout(() => {bossmove()}, 4000);
+   setTimeout(() => {bossmove()}, 6000);
+   setTimeout(() => {bossmove()}, 8000);
 }
   if (event.key === "ArrowUp"){
       if (duckplacey != 1){
