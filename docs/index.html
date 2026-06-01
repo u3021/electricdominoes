@@ -39,11 +39,11 @@ document.addEventListener('keydown', (event) => {
 document.querySelector("#starttext").innerHTML=""  
 if (start === 0){
   start = 1;
-  bossmove()
-  bossmove()
-  bossmove()
-  bossmove()
-  bossmove()
+  bossmove();
+  bossmove(), 2000);
+  bossmove(), 4000);
+  bossmove(), 6000);
+  bossmove(), 8000);
 }
   if (event.key === "ArrowUp"){
       if (duckplacey != 1){
