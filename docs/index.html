@@ -37,15 +37,48 @@
     document.querySelector("#duck5").innerHTML="⬜⬜⬜⬜⬜"
    document.querySelector("#boss").innerHTML="⬛⬛🟦⬛⬛"
    document.querySelector("#hpboss").innerHTML="❤❤❤❤❤"
-    function rand(min, max) {
+    function bossmove(){
+if (start === 1){
+  setTimeout(() => {
+   randrow = rand(1, 5);
+if (randrow === 1 && tired === 0){
+     document.querySelector("#boss").innerHTML="🟦⬛⬛⬛⬛"
+  attackrow = 1;
+}else if (randrow === 2 && tired === 0){
+     document.querySelector("#boss").innerHTML="⬛🟦⬛⬛⬛"
+  attackrow = 2;
+}else if (randrow === 3 && tired === 0){
+     document.querySelector("#boss").innerHTML="⬛⬛🟦⬛⬛"
+  attackrow = 3;
+}else if (randrow === 4 && tired === 0){
+     document.querySelector("#boss").innerHTML="⬛⬛⬛🟦⬛"
+  attackrow = 4;
+}else if (randrow === 5 && tired === 0){
+     document.querySelector("#boss").innerHTML="⬛⬛⬛⬛🟦"
+  attackrow = 5;
+} else if (randrow === 1 && tired === 1){
+     document.querySelector("#boss").innerHTML="⬜⬛⬛⬛⬛"
+  attackrow = 1;
+}else if (randrow === 2 && tired === 1){
+     document.querySelector("#boss").innerHTML="⬛⬜⬛⬛⬛"
+  attackrow = 2;
+}else if (randrow === 3 && tired === 1){
+     document.querySelector("#boss").innerHTML="⬛⬛⬜⬛⬛"
+  attackrow = 3;
+}else if (randrow === 4 && tired === 1){
+     document.querySelector("#boss").innerHTML="⬛⬛⬛⬜⬛"
+  attackrow = 4;
+}else if (randrow === 5 && tired === 1){
+     document.querySelector("#boss").innerHTML="⬛⬛⬛⬛⬜"
+  attackrow = 5;
+}
+}, 2000);
+}
+}
+function rand(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
   }
-document.addEventListener('keydown', (event) => {
-document.querySelector("#starttext").innerHTML=""
-document.querySelector("#instructions1").innerHTML=""
-document.querySelector("#instructions2").innerHTML=""
-start = 1;
-  function round(){ 
+ function round(){ 
   bossmove();
    setTimeout(() => {bossmove()}, 2000);
    setTimeout(() => {bossmove()}, 4000);
@@ -54,6 +87,11 @@ start = 1;
    setTimeout(() => {tired = 1; bossmove()}, 10000);
    setTimeout(() => {tired = 0; round()}, 12000);
   }
+document.addEventListener('keydown', (event) => {
+document.querySelector("#starttext").innerHTML=""
+document.querySelector("#instructions1").innerHTML=""
+document.querySelector("#instructions2").innerHTML=""
+start = 1;
 if (start === 0){
  round() 
 }
@@ -159,44 +197,6 @@ if (duckplacex === 1 && duckplacey === 5){
     document.querySelector("#duck1").innerHTML="⬜⬜⬜⬜🦆"
 }   
 });
-function bossmove(){
-if (start === 1){
-  setTimeout(() => {
-   randrow = rand(1, 5);
-if (randrow === 1 && tired === 0){
-     document.querySelector("#boss").innerHTML="🟦⬛⬛⬛⬛"
-  attackrow = 1;
-}else if (randrow === 2 && tired === 0){
-     document.querySelector("#boss").innerHTML="⬛🟦⬛⬛⬛"
-  attackrow = 2;
-}else if (randrow === 3 && tired === 0){
-     document.querySelector("#boss").innerHTML="⬛⬛🟦⬛⬛"
-  attackrow = 3;
-}else if (randrow === 4 && tired === 0){
-     document.querySelector("#boss").innerHTML="⬛⬛⬛🟦⬛"
-  attackrow = 4;
-}else if (randrow === 5 && tired === 0){
-     document.querySelector("#boss").innerHTML="⬛⬛⬛⬛🟦"
-  attackrow = 5;
-} else if (randrow === 1 && tired === 1){
-     document.querySelector("#boss").innerHTML="⬜⬛⬛⬛⬛"
-  attackrow = 1;
-}else if (randrow === 2 && tired === 1){
-     document.querySelector("#boss").innerHTML="⬛⬜⬛⬛⬛"
-  attackrow = 2;
-}else if (randrow === 3 && tired === 1){
-     document.querySelector("#boss").innerHTML="⬛⬛⬜⬛⬛"
-  attackrow = 3;
-}else if (randrow === 4 && tired === 1){
-     document.querySelector("#boss").innerHTML="⬛⬛⬛⬜⬛"
-  attackrow = 4;
-}else if (randrow === 5 && tired === 1){
-     document.querySelector("#boss").innerHTML="⬛⬛⬛⬛⬜"
-  attackrow = 5;
-}
-}, 2000);
-}
-}
 </script>
 </body>
 </html>  
