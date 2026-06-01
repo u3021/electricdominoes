@@ -41,15 +41,20 @@
   return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 document.addEventListener('keydown', (event) => {
-document.querySelector("#starttext").innerHTML=""  
+document.querySelector("#starttext").innerHTML=""
+document.querySelector("#instructions1").innerHTML=""
+document.querySelector("#instructions2").innerHTML=""
 if (start === 0){
   start = 1;
+  function round(){ 
   bossmove();
    setTimeout(() => {bossmove()}, 2000);
    setTimeout(() => {bossmove()}, 4000);
    setTimeout(() => {bossmove()}, 6000);
    setTimeout(() => {bossmove()}, 8000);
    setTimeout(() => {tired = 1; bossmove()}, 10000);
+   setTimeout(() => {tired = 0; round()}, 12000);
+  }
 }
   if (event.key === "ArrowUp"){
       if (duckplacey != 1){
