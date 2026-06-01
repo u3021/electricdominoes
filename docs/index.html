@@ -37,7 +37,10 @@
     document.querySelector("#duck5").innerHTML="⬜⬜⬜⬜⬜"
    document.querySelector("#boss").innerHTML="⬛⬛🟦⬛⬛"
    document.querySelector("#hpboss").innerHTML="❤❤❤❤❤"
-    function bossmove(){
+    function rand(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+function bossmove(){
 if (start === 1){
   setTimeout(() => {
    randrow = rand(1, 5);
@@ -75,9 +78,6 @@ if (randrow === 1 && tired === 0){
 }, 2000);
 }
 }
-function rand(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
  function round(){ 
   bossmove();
    setTimeout(() => {bossmove()}, 2000);
