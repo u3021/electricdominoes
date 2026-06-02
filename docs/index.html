@@ -41,7 +41,7 @@
   return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 function bossmove(){
-if (start === 1){
+if (start === 1 && died === 0){
   setTimeout(() => {
    randrow = rand(1, 5);
 if (randrow === 1 && tired === 0){
