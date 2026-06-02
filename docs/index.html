@@ -100,6 +100,7 @@ if(duckplacex === attackrow){
    setTimeout(() => {tired = 0; round()}, 12000);
   }
 document.addEventListener('keydown', (event) => {
+if(died === 0){
 document.querySelector("#starttext").innerHTML=""
 document.querySelector("#instructions1").innerHTML=""
 document.querySelector("#instructions2").innerHTML=""
@@ -107,22 +108,22 @@ if (start === 0){
  start = 1;
   round() 
 }
-  if (event.key === "ArrowUp" && died === 0){
+  if (event.key === "ArrowUp"){
       if (duckplacey != 1){
 --duckplacey;
       }
   }
-    if (event.key === "ArrowDown" && died === 0){
+    if (event.key === "ArrowDown"){
   if (duckplacey != 5){
 ++duckplacey;
       }
   }
-    if (event.key === "ArrowLeft" && died === 0){
+    if (event.key === "ArrowLeft"){
   if (duckplacex != 1){
         --duckplacex;
       }
     }
-    if (event.key === "ArrowRight" && died === 0){
+    if (event.key === "ArrowRight"){
   if (duckplacex != 5){
         ++duckplacex;
       }
@@ -207,7 +208,8 @@ if (duckplacex === 1 && duckplacey === 5){
     document.querySelector("#duck2").innerHTML="⬜⬜⬜⬜🦆"
 }else if (duckplacex === 5 && duckplacey === 1){
     document.querySelector("#duck1").innerHTML="⬜⬜⬜⬜🦆"
-}   
+}
+}
 });
 </script>
 </body>
