@@ -25,6 +25,7 @@
   var attackrow = 0;
   var start = 0;
   var tired = 0;
+  var died = 0;
    document.querySelector("#hpplayer").innerHTML="❤❤❤"
    document.querySelector("#starttext").innerHTML="press any key to start"
   document.querySelector("#instructions1").innerHTML="avoid being in the same row as the square when it is blue"
@@ -82,6 +83,10 @@ if(duckplacex === attackrow){
        document.querySelector("#hpplayer").innerHTML="❤❤💔"
   }else if(hp === 1){
      document.querySelector("#hpplayer").innerHTML="❤💔💔"
+}else if(hp < 1){
+     document.querySelector("#hpplayer").innerHTML="💔💔💔"
+    document.querySelector("#starttext").innerHTML="you lose :("
+    died = 1;
 }
 }
 }
@@ -102,22 +107,22 @@ if (start === 0){
  start = 1;
   round() 
 }
-  if (event.key === "ArrowUp"){
+  if (event.key === "ArrowUp" && died === 0){
       if (duckplacey != 1){
 --duckplacey;
       }
   }
-    if (event.key === "ArrowDown"){
+    if (event.key === "ArrowDown" && died === 0){
   if (duckplacey != 5){
 ++duckplacey;
       }
   }
-    if (event.key === "ArrowLeft"){
+    if (event.key === "ArrowLeft" && died === 0){
   if (duckplacex != 1){
         --duckplacex;
       }
     }
-    if (event.key === "ArrowRight"){
+    if (event.key === "ArrowRight" && died === 0){
   if (duckplacex != 5){
         ++duckplacex;
       }
