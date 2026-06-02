@@ -111,7 +111,8 @@ if(duckplacex === attackrow && tired === 0){
    setTimeout(() => {bossmove()}, 6000);
    setTimeout(() => {bossmove()}, 8000);
    setTimeout(() => {tired = 1; bossmove()}, 10000);
-   setTimeout(() => {tired = 0; round()}, 12000);
+   setTimeout(() => {tired = 1; bossmove()}, 12000);
+   setTimeout(() => {tired = 0; round()}, 14000);
   }
 document.addEventListener('keydown', (event) => {
 if(died === 0){
