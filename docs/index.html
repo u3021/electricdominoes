@@ -21,7 +21,6 @@
   var duckplacey = 3;
   var hp = 3;
   var bosshp = 5;
-  var timer = 5000;
   var randrow = 0;
   var attackrow = 0;
   var start = 0;
@@ -76,6 +75,13 @@ if (randrow === 1 && tired === 0){
   attackrow = 5;
 }
 }, 2000);
+if(duckplacex === attackrow){
+ --hp;
+  if(hp === 2){
+       document.querySelector("#hpplayer").innerHTML="❤❤💔"
+  }else if(hp === 1){
+     document.querySelector("#hpplayer").innerHTML="❤💔💔"
+}
 }
 }
  function round(){ 
