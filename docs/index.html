@@ -62,23 +62,18 @@ if (randrow === 1 && tired === 0){
 } else if (randrow === 1 && tired === 1){
      document.querySelector("#boss").innerHTML="⬜⬛⬛⬛⬛"
   attackrow = 1;
-  tired = 1;
 }else if (randrow === 2 && tired === 1){
      document.querySelector("#boss").innerHTML="⬛⬜⬛⬛⬛"
   attackrow = 2;
-  tired = 1;
 }else if (randrow === 3 && tired === 1){
      document.querySelector("#boss").innerHTML="⬛⬛⬜⬛⬛"
   attackrow = 3;
-  tired = 1;
 }else if (randrow === 4 && tired === 1){
      document.querySelector("#boss").innerHTML="⬛⬛⬛⬜⬛"
   attackrow = 4;
-  tired = 1;
 }else if (randrow === 5 && tired === 1){
      document.querySelector("#boss").innerHTML="⬛⬛⬛⬛⬜"
   attackrow = 5;
-  tired = 1;
 }
 }, 2000);
 }
@@ -93,6 +88,7 @@ if(duckplacex === attackrow && tired === 0){
     document.querySelector("#starttext").innerHTML="you lose :("
     died = 1;
 }
+}
 if(duckplacex === attackrow && tired === 1){
  --bosshp;
   if(bosshp === 4){
@@ -106,8 +102,6 @@ if(duckplacex === attackrow && tired === 1){
 }else if(bosshp < 1){
      document.querySelector("#hpboss").innerHTML="💔💔💔💔💔"
     document.querySelector("#starttext").innerHTML="you win :)"
-}
-}
 }
 }
  function round(){ 
