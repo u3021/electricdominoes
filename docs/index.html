@@ -87,7 +87,8 @@ if(duckplacex === attackrow && tired === 0){
      document.querySelector("#hpplayer").innerHTML="💔💔💔"
     document.querySelector("#starttext").innerHTML="you lose :("
     died = 1;
-}else if(duckplacex === attackrow && tired === 1){
+}
+if(duckplacex === attackrow && tired === 1){
  --bosshp;
   if(bosshp === 4){
          document.querySelector("#hpboss").innerHTML="❤❤❤❤💔"
